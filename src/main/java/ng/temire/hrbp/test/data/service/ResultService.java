@@ -42,7 +42,7 @@ public class ResultService {
     try{
     return new GenericResponseDTO("00", HttpStatus.OK, "Returned Successfully", repository.findAllBySchoolYearAndSchoolTermAndStudentIdAndSubjectIdAndClassName( year,  term,  studentid,  subject,  stdclass));
     }catch(Exception ex){
-      return new GenericResponseDTO("00", HttpStatus.INTERNAL_SERVER_ERROR, "Error Retrieving Records", null);
+      return new GenericResponseDTO("99", HttpStatus.INTERNAL_SERVER_ERROR, "Error Retrieving Records", null);
     }
   }
 
@@ -72,7 +72,7 @@ public class ResultService {
     }
     return responseDTO;
     }catch(Exception ex){
-      return new GenericResponseDTO("00", HttpStatus.INTERNAL_SERVER_ERROR, "Error Retrieving Records", null);
+      return new GenericResponseDTO("99", HttpStatus.INTERNAL_SERVER_ERROR, "Error Retrieving Records", null);
     }
   }
 
